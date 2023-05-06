@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover" name="viewport" />
+<title>RM | TIME</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/vue.min.js"></script>
+<style>
+    [v-cloak] {
+        display: none
+    }
+</style>
+</head>
+<body>
+<div id="app" v-cloak>
+	<div class="date">
+		<ul>
+			<li><i>{{months}}</i>月</li>
+			<li><i>{{date | getDate}}</i></li>
+		</ul>
+		<div class="week">
+			<h3>{{day | getWeek}}</h3>
+			<p v-html="liveDesc">{{liveDesc}}</p>
+		</div>
+	</div>
+	<canvas></canvas>
+</div>
+<script src="js/index.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
+
